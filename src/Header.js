@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import  { useState, useEffect } from 'react';
+import { IoIosSearch } from "react-icons/io";
 
 const Header = () => {
 
@@ -19,11 +20,11 @@ const Header = () => {
   }, []);
   return (
     <div className='absolute w-[100%]'> 
-         <div className={`flex justify-between fixed h-[5rem] top-0 left-0 w-[100%] text-white z-10 bg-transparent items-center px-12 hover:bg-red-950 ${
-        isScrolled ? ' bg-[#450a0a] shadow-lg  border-white' : ''
+         <div className={`flex fixed h-[5rem] top-0 left-0 w-[100%] text-white z-10 bg-transparent items-center px-12 hover:bg-red-950 ${
+        isScrolled ? ' bg-red-950 shadow-lg ' : ''
       }`}>
 
-        <div className='flex flex-col items-center justify-center'>
+        <div className='flex flex-col m-2 p-5 items-center justify-center'>
         <svg version="1.0" className='h-[4rem] fill-white hover:fill-[#FFD700]  w-[4rem]' xmlns="http://www.w3.org/2000/svg"
  width="499.000000pt" height="499.000000pt" viewBox="0 0 499.000000 499.000000"
  preserveAspectRatio="xMidYMid meet">
@@ -156,13 +157,17 @@ m771 -117 c-13 -65 -61 -165 -91 -192 l-22 -19 8 49 c4 27 14 69 23 92 19 48
 </svg>
 
         </div>
-        <div>
+        <div className='m-2 p-5'>
             <ul className='flex h-full space-x-8 text-sm'>
                 <li className=' hover:text-[#FFD700] h-[5rem] hover:border-b-[0.09rem] hover:border-[#FFD700]  cursor-pointer transition-all duration-400 flex items-center justify-center'>Home</li>
-                <li className=' hover:text-[#FFD700] h-[5rem] hover:border-b-[0.09rem] hover:border-[#FFD700]  cursor-pointer transition-all duration-400 flex items-center justify-center'>About</li>
-                <li className=' hover:text-[#FFD700] h-[5rem] hover:border-b-[0.09rem] hover:border-[#FFD700] cursor-pointer transition-all duration-400 flex items-center justify-center'>Products</li>
+                <li className=' hover:text-[#FFD700] h-[5rem] hover:border-b-[0.09rem] hover:border-[#FFD700]  cursor-pointer transition-all duration-400 flex items-center justify-center'>Our Story</li>
+                <li className=' hover:text-[#FFD700] h-[5rem] hover:border-b-[0.09rem] hover:border-[#FFD700] cursor-pointer transition-all duration-400 flex items-center justify-center'>Shop</li>
                 <li className=' hover:text-[#FFD700] h-[5rem] hover:border-b-[0.09rem] hover:border-[#FFD700] cursor-pointer transition-all duration-400 flex items-center justify-center'>Contact</li>
             </ul>
+        </div>
+        <div className='search ml-auto flex flex-row items-center justify-center'>
+      <input type='text' className='rounded-full h-5 ml-auto'></input>
+      <IoIosSearch className='m-[0.5px] p-[0.5px] h-4'/>
         </div>
     </div>
     </div>
